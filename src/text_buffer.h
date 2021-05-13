@@ -12,6 +12,9 @@
 
 #include <string>
 
+/**
+ * Buffer for text input.
+ */
 class TextBuffer {
 	public:
 		TextBuffer();
