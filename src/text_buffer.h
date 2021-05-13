@@ -42,8 +42,8 @@ class TextBuffer {
 			this->current_position = max(0, this->current_position - 1);
 		}
 	private:
-		std::string text;
-		uint current_position;
+		std::string text;      ///< String in which text is kept.
+		uint current_position; ///< Current position of the 'cursor' in the buffer.
 };
 
 #endif
