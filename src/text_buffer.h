@@ -27,8 +27,8 @@ class TextBuffer {
 
 		void SetPosition(int position) { this->current_position = position; };
 		int GetPosition();
-		void IncPosition() { if (this->current_position < this->text.length() - 1) this->current_position++; };
-		void DecPosition() { if (this->current_position > 0) this->current_position--; };
+		void IncPosition() { this->current_position = min(this->text.length() - 1, this->current_position + 1); };
+		void DecPosition() { this->current_position = max(0, this->current_position - 1); };
 	private:
 		std::string text;
 		uint current_position;
